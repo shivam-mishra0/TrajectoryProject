@@ -1,110 +1,3 @@
-let count = 0;
-const temp = document.getElementsByClassName('right');
-
-// const getData1 = ()=>{
-//     // alert("this is an alert")
-//     console.log("Clkichjfkdhkfdhk")
-//     console.log(temp)
-//     // temp.innerHTML("THis is dynamic")
-// //    temp.appendChild('h1').innerHtml = "How are you" 
-
-// var tag = document.createElement("p"); // <p></p>
-//   var text = document.createTextNode("TEST TEXT"); 
-//   tag.appendChild(text); // <p>TEST TEXT</p>
-// //   var element = document.getElementsByTagName("body")[0];
-//   temp[0].appendChild(tag); 
-//   temp[0].getElementsByClassName('top')[0].appendChild(tag)
-//   console.log()
-
-// }
-
-
-
-
-
-let employees = [
-    { name: 'James', age: 21, country: 'United States' },
-    { name: 'Rony', age: 31, country: 'United Kingdom' },
-    { name: 'Peter', age: 58, country: 'Canada' },
-    { name: 'Marks', age: 20, country: 'Spain' }
-]
-btnGet.addEventListener('click', () => {
-  console.log("ahjhfd")
-  var flag = true;
-  if(flag){
-
-      let table = document.createElement('table');
-  let headerRow = document.createElement('tr');
-
-  headers.forEach(headerText => {
-      let header = document.createElement('th');
-      let textNode = document.createTextNode(headerText);
-      header.appendChild(textNode);
-      headerRow.appendChild(header);
-  });
-
-  table.appendChild(headerRow);
-
-  data.forEach(i => {
-      let row = document.createElement('tr');
-
-      Object.values(i).forEach(text => {
-          let cell = document.createElement('td');
-          let textNode = document.createTextNode(text);
-          cell.appendChild(textNode);
-          row.appendChild(cell);
-      })
-
-      table.appendChild(row);
-  });
-
-  myTable.appendChild(table);
-
-  var flag = false;
-
-}
-  
-
-
-const labels = [
-  'January',
-  'February',
-  'March',
-  'April',
-  'May',
-  'June',
-];
-
-const data = {
-  labels: labels,
-  datasets: [{
-    label: 'My First dataset',
-    backgroundColor: 'rgb(255, 99, 132)',
-    borderColor: 'rgb(255, 99, 132)',
-    data: [0, 10, 5, 2, 20, 30, 45],
-  }]
-};
-
-const config = {
-  type: 'line',
-  data: data,
-  options: {}
-};
-
-
-const myChart = new Chart(
-  document.getElementById('myChart'),
-  config
-);
-
-
-
-
-
-
-}, {once:true});
-
-
 //main code
 
 async function getParticularData(e){
@@ -120,6 +13,7 @@ async function getParticularData(e){
   const Data = data.data
 
   let myTable = document.querySelector('#table2');
+  myTable.innerHTML=""  
 
   let headers = [ 'TimeStamp', 'Latitude', 'Longitude'];
   let table = document.createElement('table');
