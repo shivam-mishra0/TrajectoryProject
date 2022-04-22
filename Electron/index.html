@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+
+    <style>
+        .wrapper{
+            /* background-color: rgb(232, 222, 222); */
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 10px;
+            height: 100vh;
+
+        }
+
+        .left{
+            flex: 1;
+            background-color: whitesmoke;
+            height: 100%;
+        }
+
+        .right{
+            flex:2;
+            /* background-color: yellow; */
+            gap: 10px;
+            height: 100%;
+        }
+
+        .top{
+            background-color: whitesmoke;
+            height: 50%;
+            overflow-y: auto;
+
+        }
+        .bottom{
+            margin-top: 10px;
+            background-color: whitesmoke;
+            height: calc(50% - 10px);
+            overflow-y: auto;
+
+            
+        }
+
+
+
+
+    table { 
+	width: 100%; 
+	border-collapse: collapse; 
+	margin:50px auto;
+	}
+
+/* Zebra striping */
+tr:nth-of-type(odd) { 
+	background: #eee; 
+	}
+
+th { 
+	background: #3498db; 
+	color: white; 
+	font-weight: bold; 
+	}
+
+td, th { 
+	padding: 10px; 
+	border: 1px solid #ccc; 
+	text-align: left; 
+	font-size: 18px;
+	}
+
+.viewbtn{
+    cursor: pointer;
+    width: 100%;
+    padding: 12px;
+    height: 100%;
+
+}
+
+.viewbtn:hover{
+    background-color: rgb(208, 196, 196);
+}
+/* 
+Max width before this PARTICULAR table gets nasty
+This query will take effect for any screen smaller than 760px
+and also iPads specifically.
+*/
+
+    </style>
+</head>
+<body onload="returnGet()">
+    <!-- <h1>This is my electron window</h1> -->
+
+    <div class="wrapper">
+        <div class="left">
+            <!-- <button>click me</button> -->
+            <div id="table"></div>
+            
+        </div>
+        <div class="right">
+            
+            <div class="top">
+                <div id="table2"></div>
+            
+            <!-- <button onclick="XYZ()">click me</button> -->
+
+            <!-- <button onclick='returnGet()'>click me to Get return something</button> -->
+
+
+            </div>
+
+            <div class="bottom">
+                Graph
+            <canvas id="myChart" style="width:100%;max-width:700px"></canvas>
+                
+
+            </div>
+        </div>
+    </div>
+
+    <script src="renderer.js"></script>
+
+   
+</body>
+</html>
