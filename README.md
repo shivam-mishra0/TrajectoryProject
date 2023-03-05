@@ -1,4 +1,4 @@
-# BlurgsAssginment
+# Trajectory Project
 **Nodemon should be installed globaly in system
 Steps to run the file
 1. clone the project
